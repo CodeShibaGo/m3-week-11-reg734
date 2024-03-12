@@ -5,3 +5,5 @@ class User(db.Model):
     email = db.Column(db.String(255), nullable=False)
     username = db.Column(db.String(255), nullable=False)
     password = db.Column(db.String(255), nullable=False)
+    def __init__(self, email, username, password):
+      self.email = email

@@ -16,3 +16,6 @@ class Car(db.Model):
     power_type = db.Column(db.String(255), nullable=False, default='Unknown')
     brand = db.Column(db.String(255))
     model = db.Column(db.String(255))
+
+    def __repr__(self):
+        return f"<Car(car_name={self.car_name}, displacement={self.displacement}, car_type={self.car_type}, seat_number={self.seat_number}, door_number={self.door_number}, car_length={self.car_length}, wheelbase={self.wheelbase}, power_type={self.power_type}, brand={self.brand}, model={self.model})>"
